@@ -24,7 +24,7 @@ const bcrypt = require("bcrypt-nodejs");
 // const router = express.Router();
 const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
-const Cors = require("cors");
+// const Cors = require("cors");
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
 // router.use(cookieParser());
@@ -32,7 +32,7 @@ const passport = require('passport');
 //   origin: 'http://localhost:8080',
 //   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 // }
-app.use(Cors());
+// app.use(Cors());
 // app.options('/sign-login', Cors()) // enable pre-flight request for DELETE request
 // app.del('/products/:id', cors(), function (req, res, next) {
 //   res.json({msg: 'This is CORS-enabled for all origins!'})
@@ -245,7 +245,7 @@ app.post("/quickregistration", jsonParser, function (req, res) { //cloud
     });
 });
 
-app.post("/sign-login", jsonParserб function (req, res) { //cloud 
+app.post("/sign-login", jsonParser, function (req, res) { //cloud 
     const userName = req.body.userName;
     const password = req.body.password;
     

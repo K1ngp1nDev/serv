@@ -67,9 +67,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "*");
-  res.header("Access-Control-Allow-Headers", "*");
+  res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.setHeader("Access-Control-Allow-Credentials", "true");
   next();
 });
 
@@ -78,8 +78,7 @@ app.get('/',function(req, res) {
   // var ccookie = req.cookies;
   // console.log('bfore cookie');
   // console.log(JSON.stringify(req.cookies), 'cookie');
-    res.send(`<h1>Hello
-    ${JSON.stringify(req.session)}</h1>`);
+    res.send(`<h1>test chat server</h1>`);
 });
 
 
@@ -246,7 +245,7 @@ app.post("/quickregistration", jsonParser, function (req, res) { //cloud
     });
 });
 
-app.post("/sign-login", function (req, res) { //cloud 
+app.post("/sign-login", jsonParserб function (req, res) { //cloud 
     const userName = req.body.userName;
     const password = req.body.password;
     

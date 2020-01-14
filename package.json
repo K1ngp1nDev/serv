@@ -1,0 +1,30 @@
+{
+  "name": "express-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "connect-mongodb-session": "^2.2.0",
+    "cookie-parser": "^1.4.4",
+    "cookie-session": "^1.4.0",
+    "core-js": "^2.6.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "file-system": "^2.2.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.4.1",
+    "mongoose": "^5.8.1",
+    "passport": "^0.4.1"
+  },
+  "keywords": [],
+  "author": "Kyrell Dixon",
+  "license": "MIT"
+}
